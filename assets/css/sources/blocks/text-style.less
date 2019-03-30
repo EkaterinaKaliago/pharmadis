@@ -1,0 +1,145 @@
+.text-style {
+  h2 {
+	color: #262626;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	padding-bottom: 20px;
+	padding-top: 35px;
+	font-family: Montserrat, sans-serif;
+	.media-max(1200px, {
+	  font-size: 18px;
+	});
+	.media-max(980px, {
+	  font-size: 14px;
+	  padding-bottom: 10px;
+	padding-top: 10px;
+	});
+  }
+
+  p {
+	color: #262626;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding-bottom: 20px;
+	padding-top: 0;
+	max-width: 800px;
+	.media-max(1200px, {
+	  font-size: 14px;
+	});
+	.media-max(980px, {
+	  font-size: 12px;
+	  padding-bottom: 10px;
+	padding-top: 10px!important;
+	});
+	.media-max(600px, {
+	  padding-bottom: 0px;
+	});
+
+  }
+
+  li {
+	color: #262626;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding-bottom: 20px;
+	.media-max(1200px, {
+	  font-size: 14px;
+	});
+	.media-max(980px, {
+	  font-size: 12px;
+	  padding-bottom: 10px;
+	});
+	.media-max(600px, {
+	  padding-bottom: 0px;
+	});
+  }
+
+  ul {
+	padding-left: 0;
+	list-style-type: none;
+	margin: 0;
+
+	li  {
+	  position: relative;
+	  padding-left: 20px;
+	  &:before {
+		content: "";
+		width: 8px;
+		height: 8px;
+		border: 1px solid #2996d0;
+		background: #fff;
+		border-radius: 50%;
+		position: absolute;
+		top: 4px;
+		left: 0px;
+		padding: 0;
+	  }
+	}
+  }
+
+  ol {
+	padding-left: 0;
+	list-style-type: none;
+	counter-reset: num;
+	margin: 0;
+
+	li:before {
+	  content: counter(num) '';
+	  counter-increment: num;
+	  color: #2996d0;
+	  font-family: Montserrat, sans-serif;
+	  font-size: 16px;
+	  font-weight: 500;
+	  line-height: 24px;
+	  padding-right: 15px;
+	  .media-max(1200px, {
+		font-size: 14px;
+	  });
+	}
+  }
+
+  .tab__list--property {
+	li {
+	  background: url('../images/line-bg.svg') repeat-x 80%;
+	  padding-bottom: 15px;
+	  padding-left: 0;
+
+	  &:after {
+		content: '';
+	  }
+
+	  &:before {
+		content: none;
+	  }
+	  .media-max(980px, {
+		padding-bottom: 0px;
+	  });
+	  .media-max(980px, {
+
+	  });
+
+	}
+
+	span {
+	  background: #fff;
+	  display: inline-block;
+	  white-space: nowrap;
+	}
+
+
+  }
+
+  .tab__tech--right {
+	.tab__list--property li{
+	  background: none;
+	}
+  }
+
+
+
+}
+
+

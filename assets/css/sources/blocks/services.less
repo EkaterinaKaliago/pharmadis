@@ -1,0 +1,120 @@
+.services {
+  p {
+	max-width: 410px;
+  }
+
+  &__heading {
+	.media-max(500px, {
+	  padding-top: 50px;
+	});
+  }
+
+  &__wrap {
+	margin: 0 auto;
+	max-width: 822px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 90px;
+	.media-max(980px, {
+	  padding-top: 30px;
+	});
+	.media-max(500px, {
+	  padding-top: 0px;
+	});
+  }
+
+  &__items {
+	.flex-column();
+	padding-top: 60px;
+	.media-max(500px, {
+	  padding-top: 30px;
+	});
+  }
+
+  &__text {
+	padding-left: 90px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: "Montserrat Alternates";
+	font-size: 15px;
+	font-weight: 400;
+	span {
+	  color: #363d41;
+	  border-bottom: 1px solid rgba(38, 38, 38, 0.2);
+	  transition: all 0.2s ease;
+
+	  &:hover{
+		text-decoration: none;
+		border-color: transparent;
+	  }
+	}
+
+	.media-max(550px, {
+	  font-size: 13px;
+	});
+  }
+
+  &__item {
+	background-color: @blue-light;
+	max-width: 357px;
+	height: 78px;
+	position: relative;
+	border-radius: 66px;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	.media-max(400px, {
+	  margin-bottom: 20px;
+	});
+
+	&:before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  width: 76px;
+	  height: 78px;
+	  background-color: @blue-dark;
+	  border-radius: 50%;
+	}
+
+	&:after {
+	  content: '';
+	  position: absolute;
+	  top: 19px;
+	  left: 18px;
+	  z-index: 1;
+	  width: 36px;
+	  height: 38px;
+	  background: url("../images/car.svg") no-repeat 50% 50%;
+	}
+
+	&:nth-child(1) {
+	  margin-left: 55px;
+
+	  .media-max(925px, {
+		margin-left: 0;
+	  });
+
+	  &:after {
+		background: url("../images/drill.svg") no-repeat 50% 50%;
+	  }
+	}
+	&:nth-child(3) {
+	  margin-left: -51px;
+	  .media-max(925px, {
+		margin-left: 0;
+	  });
+	  &:after {
+		background: url("../images/hospital.svg") no-repeat 50% 50%;
+	  }
+
+	}
+  }
+
+
+
+}

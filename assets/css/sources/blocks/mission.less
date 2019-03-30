@@ -1,0 +1,115 @@
+.mission {
+
+  padding-top: 200px;
+  position: relative;
+  z-index: 22;
+
+  .media-max(980px, {
+	padding-top: 90px;
+  });
+
+  .media-max(800px, {
+	padding-top: 60px;
+  });
+
+  p {
+	max-width: 375px;
+  }
+
+  &__circle {
+	background-color: #c5ecf9;
+	width: 529px;
+	height: 529px;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	.media-max(800px, {
+	  width: 450px;
+	  height: 450px;
+	});
+	.media-max(600px, {
+	  width: 400px;
+	  height: 400px;
+	});
+	.media-max(465px, {
+	  width: 100%;
+	  height: 265px;
+	  border-radius: 4px;
+	});
+
+	&:after {
+	  content: '';
+	  position: absolute;
+	  bottom: -60px;
+	  right: -30px;
+	  width: 260px;
+	  height: 260px;
+	  background: url("../images/mission.png") no-repeat 50% 50%;
+	  background-size: contain;
+	  .media-max(800px, {
+		width: 150px;
+		height: 150px;
+	    bottom: -10px;
+	  });
+	  .media-max(465px, { top:-40px;
+	  right: -7px;
+	  });
+
+	}
+  }
+
+  &__info {
+	position: absolute;
+	top: 17%;
+	left: 17%;
+	display: flex;
+	flex-direction: column;
+
+	.media-max(465px, {
+	  position: static;
+	  padding-left: 20px;
+	  padding-top: 50px;
+	});
+  }
+
+}
+
+.mission__circle__line{
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  .media-max(800px, {
+	display: none;
+  });
+
+
+}
+
+
+.mission__date {
+  position: absolute;
+  bottom: -48px;
+  left: 109px;
+  object-fit: contain;
+  opacity: 0;
+  .media-max(800px, {
+	display: none;
+  });
+}
+
+
+.mission__date {
+  animation: date 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes date {
+  from {
+	opacity: 0;
+  }
+
+  to {
+	opacity: 1;
+  }
+}

@@ -1,0 +1,90 @@
+.error {
+
+  padding-top: 80px;
+  &__word {
+	color: #2996d0;
+	font-family: "Montserrat Alternates";
+	font-size: 72px;
+	font-weight: 400;
+	line-height: 35px;
+	.media-max(500px, {
+	 font-size: 50px;
+	});
+  }
+
+  .brands-main {
+	background: url(../images/bg.svg) no-repeat 50% 61%;
+  }
+
+  .p-sm {
+	max-width: 435px!important;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding-top: 170px;
+	.media-max(890px, {
+	 max-width: 100%!important;
+	padding-top: 80px;
+	});
+	.media-max(800px, {
+	 font-size: 14px;
+	line-height: 21px;
+	padding-top: 50px;
+	});
+	.media-max(500px, {
+	 padding-top: 30px;
+	});
+
+	a {
+	  color: #262626;
+	  border-bottom: 1px solid rgba(38, 38, 38, 0.2);
+	  transition: color 0.2s ease-out, border-color 0.2s ease-out;
+
+	  &:hover {
+		color: @blue;
+		border-color: transparent;
+	  }
+	}
+  }
+  .p-lg { padding-top: 30px;
+	.media-max(500px, {
+	  max-width: 100%;
+	line-height: 21px;
+	});}
+
+
+  .brands-main .search__wrap .search {
+	background-color: #f6f6f6;
+
+  }
+
+  .search__wrap {
+	max-width: 520px;
+  }
+
+  .info-map__map {
+	.media-max(890px, {
+	 width: 40%;
+	});
+	.media-max(500px, {
+	  width: 30%;
+	});
+	.media-max(450px, {
+	  width: 15%;
+	});
+  }
+
+  .info-map__text {
+	.media-max(890px, {
+	  width: 60%;
+	});
+	.media-max(500px, {
+	 width: 70%;
+	});
+	.media-max(450px, {
+	  width: 85%;
+	});
+  }
+
+}
+

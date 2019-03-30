@@ -1,0 +1,83 @@
+.ib (@align) {
+  display: inline-block;
+  vertical-align: @align;
+}
+
+.gradient () {
+  background-image: linear-gradient(to top, rgba(153, 68, 39, 0.16) 0%, rgba(255, 255, 255, 0.16) 77%, rgba(255, 255, 255, 0.16) 100%);
+}
+
+.btn-colored (@bg, @color) {
+  background-color: @bg;
+  color: @color;
+
+  &:hover {
+    background-color: darken(@bg, 8%);
+  }
+
+  &:active {
+    transform: scale(1.01);
+  }
+
+  &:focus {
+    outline: 1px solid darken(@bg, 10%);
+  }
+}
+
+.img-block () {
+  width: 100%;
+  display: block;
+}
+
+.heading (@width) {
+  font-family: 'Montserrat Alternates', sans-serif;
+  line-height: 1.4;
+  max-width: @width;
+  margin: 0;
+  color: #2996d0;
+  font-size: 28px;
+  font-weight: 400;
+  padding-bottom: 25px;
+  .media-max(600px, {
+    font-size: 20px;
+  });
+}
+
+.text (@f-w) {
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: @f-w;
+}
+
+.flex-center () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column () {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-between (){
+  display: flex;
+  justify-content: space-between;
+}
+
+.z-ind () {
+  position: relative;
+  z-index: 100;
+}
+
+.absolute () {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.media-max(@width, @rules) {
+  @media screen and (max-width: @width) {
+    @rules();
+  }
+}

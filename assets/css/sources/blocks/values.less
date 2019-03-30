@@ -1,0 +1,160 @@
+.values {
+
+  h2 {
+	margin-top: 90px;
+	padding-left: 66px;
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+
+	.media-max(980px, {
+	  padding-left: 0px;
+	});
+	.media-max(800px, {
+	 margin-top: 0;
+	});
+  }
+
+  &__title {
+	color: #262626;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	padding-bottom: 15px;
+	.media-max(800px, {
+	  font-size: 18px;
+	});
+	.media-max(630px, {
+	  font-size: 15px;
+	  padding-right: 20px;
+	  padding-left: 36px;
+	});
+  }
+
+  p {
+	max-width: 540px;
+
+	.media-max(980px, {
+	  font-size: 13px;
+	});
+  }
+
+  &__items {
+	display: flex;
+	flex-wrap: wrap;
+	counter-reset:num;
+	background-color: #fff;
+	position: relative;
+	z-index: 20;
+  }
+
+  &__item {
+	width: 50%;
+	position: relative;
+	padding-left: 65px;
+	.media-max(980px, {
+	padding-left: 40px;
+	});
+
+	.media-max(630px, {
+	  width: 100%;
+	margin-bottom: 20px;
+	padding: 0;
+	});
+
+
+
+	&:before {
+	  content: '0' counter(num) "" ;
+	  counter-increment: num;
+	  position: absolute;
+	  left: 0px;
+	  color: #2996d0;
+	  font-family: "Montserrat Alternates";
+	  font-size: 40px;
+	  font-weight: 400;
+	  line-height: 30px;
+	  .media-max(980px, {
+		font-size:24px;
+		top:-5px;
+	  });
+
+	  .media-max(630px, {
+	  font-size: 20px;
+
+	  });
+	}
+  }
+
+  .card {
+	align-items: center;
+	padding-right: 40px;
+	padding-left: 40px;
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+	.media-max(980px, {
+	  padding-left: 0px;
+	padding-right: 15px;
+	});
+	.media-max(800px, {
+	  padding: 0;
+	height: 90%;
+	});
+  }
+
+  .card__text {
+	padding-left: 30px;
+	padding-right: 15px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.5;
+	max-width: 100%;
+	.media-max(450px, {
+	  padding-top: 20px;
+	  text-align: center;
+	  padding-left: 15px;
+	  padding-right: 15px;
+	});
+
+
+	span {
+	  border-bottom: 1px solid rgba(38, 38, 38, 0.21);
+	  transition: all 0.2s ease-out;
+	  white-space: nowrap;
+
+	  &:hover {
+		border-bottom: 0
+	  }
+	}
+  }
+
+  .card__img {
+	padding: 0;
+	width: 50%;
+	margin: 0 45px;
+	.media-max(800px, {
+	 width: 100%; max-width:100px;
+	});
+	.media-max(450px, {
+	padding-top: 15px;
+	  margin: 0 auto;
+	});
+  }
+
+
+}
+
+.values__item-card {
+	.media-max(800px, {
+	  width: 100%;
+	  margin: 0 auto;
+	padding: 0;
+	});
+  &:before {
+	content: none!important;
+  }
+
+  .media-max(680px, {
+	margin-bottom: 30px;  });
+}
